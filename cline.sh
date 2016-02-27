@@ -1,18 +1,17 @@
 ## COMMAND LINE SHORTCUTS
 
-install_cline() {
-	echo "";
-}
-
 # aliases
-alias install="npm install"
-alias installsd="npm install --save-dev"
-alias installs="npm install --save"
-alias installg="npm install -g"
-alias update="npm update"
-alias run="npm run"
-alias uninstall="npm uninstall"
-alias standby="pmset sleepnow"
+  # npm
+  alias install="npm install"
+  alias installsd="npm install --save-dev"
+  alias installs="npm install --save"
+  alias installg="npm install -g"
+  alias update="npm update"
+  alias run="npm run"
+  alias uninstall="npm uninstall"
+  # other
+  alias ngrok="~/ngrok"
+  alias standby="pmset sleepnow"
 
 # generates documentation via Documentation.js (http://bit.ly/1QzI3Sp)
 doc() {

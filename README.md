@@ -68,7 +68,7 @@ $ git pull
 
 ## License
 
-[The MIT License](https://github.com/fullstax/shortcuts.sh/blob/master/LICENSE)
+[The MIT License](https://github.com/fullstax/shortcuts-sh/blob/master/LICENSE)
 
 [1]: https://github.com/fullstax/shortcuts-sh/wiki/dependencies  "shortcuts.sh dependencies"
 [2]: https://github.com/fullstax/shortcuts-sh/wiki "shortcuts.sh wiki"

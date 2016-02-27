@@ -1,9 +1,5 @@
 ## PROGRAMS
 
-install_programs() {
-	echo "";
-}
-
 # OPEN FILES/DIRECTORIES IN APPS
 # Text Editor
 	# Change DEFAULT_TE to change the text editor; defaults to Sublime
