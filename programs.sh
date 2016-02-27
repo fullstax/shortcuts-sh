@@ -1,5 +1,9 @@
 ## PROGRAMS
 
+install_programs() {
+	
+}
+
 # OPEN FILES/DIRECTORIES IN APPS
 # Text Editor
 	# Change DEFAULT_TE to change the text editor; defaults to Sublime
@@ -7,9 +11,9 @@
 DEFAULT_TE=sublime\ text;
 ost() { 
 	if [[ $1 ]]; then
-		open -a $DEFAULT_TE $1;
+		open -a "$DEFAULT_TE" $1;
 	else
-		open -a $DEFAULT_TE .; 
+		open -a "$DEFAULT_TE" .; 
 	fi
 };
 # Open finder
@@ -22,12 +26,14 @@ ofind() {
 };
 	# Change DEFAULT_BROWSER to change the browser; defaults to chrome
 	# (Optional) Change "ost" to "o*", where * matches the desired browsers's initials
+	# *** NOTE *** : other files use this function, so if you change the funciton's name,
+	# 					you must change it on other files in ~/.bash/shortcuts-sh.
 DEFAULT_BROWSER=google\ chrome;
 ochr() { 
 	if [[ $1 ]]; then
-		open -a $DEFAULT_BROWSER $1;
+		open -a "$DEFAULT_BROWSER" $1;
 	else
-		open -a $DEFAULT_BROWSER .;
+		open -a "$DEFAULT_BROWSER" .;
 	fi
 };
 # Open Terminal
@@ -43,12 +49,12 @@ oterm() {
 # The following applications are paid applications that need to be purchased
 # *These commands may work with trial versions
 
-# Open irssi IRC client
+# Open irssi terminal IRC client
 irc() {
 	irssi;
 }
 
-# ngrok
+# Open ngrok
 ngrok() {
 	if [[ $1 == -s ]]; then
 		~/ngrok http $2;

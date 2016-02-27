@@ -1,5 +1,9 @@
 ## COMMAND LINE SHORTCUTS
 
+install_cline() {
+	
+}
+
 # aliases
 alias install="npm install"
 alias installsd="npm install --save-dev"

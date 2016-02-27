@@ -15,6 +15,25 @@ can() {
 	fi
 }
 
+github() {
+	input=""
+	for el in $@; do
+		input="$input $el";
+	done
+	QUERY=${input// /\%20};
+	QUERY=${QUERY//-/\%2D};
+	if [[ $1 ]]; then
+		if [[ $1 -eq -u ]]; then
+			ochr https://github.com/;
+
+		else
+			ochr https://github.com/search?q=$1;
+		fi
+	else
+		ochr https://github.com/;
+	fi
+}
+
 # look up term on dictionary.reference.com
 lookup() {
 	input=""
