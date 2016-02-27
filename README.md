@@ -29,6 +29,7 @@ $ git clone git@github.com:fullstax/shortcuts-sh
 Once you include the preceeding export/source lines in your `~/.bash*` file(s), some commands with the same name may override or be overridden by the **Shortcuts.sh** file, depending on the hierarchy of that file. 
 
 If you notice you overrode a command, simply comment out/remove the export/source lines, or rename one of the instances of the conflicted command to something else.
+
 ---
 
 Edit your `~/.bash_profile`, `~/.bashrc`, or `~/.profile` and add the following code to the top:
