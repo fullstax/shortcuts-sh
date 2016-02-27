@@ -1,7 +1,7 @@
 ## COMMAND LINE SHORTCUTS
 
 install_cline() {
-	
+	echo "";
 }
 
 # aliases

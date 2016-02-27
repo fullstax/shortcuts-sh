@@ -45,8 +45,9 @@ Check [the wiki][2] for
 
 |script|description|
 |------|-----------|
-|`$ `|...|
-
+|`$ shortcuts`|Get a quick overview of the project.|
+|`$ shortcuts docs`|Open the Readme file on Github.|
+|`$ shortcuts v[ersion]`|View project version.|
 
 ## Updating
 

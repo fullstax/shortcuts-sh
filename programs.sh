@@ -1,7 +1,7 @@
 ## PROGRAMS
 
 install_programs() {
-	
+	echo "";
 }
 
 # OPEN FILES/DIRECTORIES IN APPS
