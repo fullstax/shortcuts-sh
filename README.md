@@ -1,4 +1,4 @@
-# Shortcus.sh
+# Shortcuts.sh
 
 Speed up your development process, or just make it easier to traverse your computer using these helpful shortcuts.
 
@@ -6,7 +6,7 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 |Status|
 |------|
-|0.5.0 |
+|0.5.5 |
 
 ## Overview
 
