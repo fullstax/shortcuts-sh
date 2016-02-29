@@ -56,6 +56,8 @@ shortcuts() {
 			printf "\nNo dependency group specified.";
 			printf "Current source files with dependency groups:\n* cline\n* programs\n\n";
 		fi
+	elif [[ $1 == 'update' || $1 == 'pull' ]]; then
+		cd ~/.bash/shortcuts-sh && { git pull; cd -; };
 	else
 		printf "*******************************\nWelcome to the Shortcuts.sh cli\n*******************************\nShortcuts for use in OS X Terminal\n     *********************     \nTo see the README/docs, type\n  $ shortcuts docs\nor open 'https://github.com/fullstax/shortcuts-sh/blob/master/README.md' in your preferred browser.\n*******************************\n";
 	fi
