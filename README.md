@@ -6,7 +6,7 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 |Status|
 |------|
-|0.6.0 |
+|0.6.1 |
 
 ## Overview
 
@@ -49,6 +49,7 @@ Check [the wiki][2] for more in-depth command documentation.
 |`$ shortcuts`|Get a quick overview of the project.|
 |`$ shortcuts docs`|Open the Readme file on Github.|
 |`$ shortcuts install [cline, programs]`|Install dependencies for certain commands.|
+|`$ shortcutes update`|Update the CLI|
 |`$ shortcuts v[ersion]`|View project version.|
 
 ## Updating
@@ -60,12 +61,12 @@ $ shortcuts v # short version
 $ shortcuts version # long version
 ```
 
-Updating is simple; just navigate to the `.bash` directory that you installed the project to, and pull:
+Updating is simple; all you have to do is run the following command:
 
 ```bash
-$ cd ~/.bash/shortcuts-sh
-$ git pull
+$ shortcuts update
 ```
+...and as long as everything runs smoothly from Github, you're all set!
 
 ## License
 
