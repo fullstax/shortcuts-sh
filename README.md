@@ -6,7 +6,7 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 |Status|
 |------|
-|0.6.2 |
+|0.6.3 |
 
 ## Overview
 
@@ -57,7 +57,8 @@ Check [the wiki][2] for more in-depth command documentation.
 |`$ shortcuts`|Get a quick overview of the project.|
 |`$ shortcuts docs`|Open the Readme file on Github.|
 |`$ shortcuts install [cline, programs]`|Install dependencies for certain commands.|
-|`$ shortcutes update`|Update the CLI|
+|`$ shortcuts new [issue]`|Process a new item on Github; used for issues (currently) and pull requests (coming soon).|
+|`$ shortcuts update`|Update the CLI|
 |`$ shortcuts v[ersion]`|View project version.|
 
 ## Updating

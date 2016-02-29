@@ -6,7 +6,7 @@ source "${DIRECTORY}/search.sh"
 
 shortcuts() {
 	if [[ $1 == "v" || $1 == "version" ]]; then
-		echo "Shortcuts.sh v0.6.0";
+		echo "Shortcuts.sh v0.6.3";
 	elif [[ $1 == "docs" ]]; then
 		open https://github.com/fullstax/shortcuts-sh/blob/master/README.md;
 	elif [[ $1 == 'i' || $1 == 'install' ]]; then
@@ -55,6 +55,17 @@ shortcuts() {
 		else
 			printf "\nNo dependency group specified.";
 			printf "Current source files with dependency groups:\n* cline\n* programs\n\n";
+		fi
+	elif [[ $1 == 'new' ]]; then
+		if [[ $2 == 'issue' ]]; then
+			printf "Enter an issue title: ";
+			read ISSUE_TITLE;
+			ISSUE_TITLE=${ISSUE_TITLE// /\%20};
+			echo "Opening an issue titled '$ISSUE_TITLE' on Github";
+			ochr https://github.com/fullstax/shortcuts-sh/issues/new?title=$ISSUE_TITLE;
+		else
+			printf "\nNo new request processed.\n";
+			printf "Current requests you may generate by \`new\` include:\n* issue\n\n";
 		fi
 	elif [[ $1 == 'update' || $1 == 'pull' ]]; then
 		cd ~/.bash/shortcuts-sh && { git pull; cd -; };
