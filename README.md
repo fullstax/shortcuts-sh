@@ -14,7 +14,9 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 ---
 
-**Note**: this CLI has scripts that allow users to install dependency programs onto their computer. Running such installations may include updating system package managers such as `brew` or `npm`, and will use such package managers as well as `curl` to retrieve the proper files.
+**Note**
+
+This CLI has scripts that allow users to install dependency programs onto their computer. Running such installations may include updating system package managers such as `brew` or `npm`, and will use such package managers as well as `curl` to retrieve the proper files.
 
 All connections to websites are made using `https://`, and be sure to check the [documentation][2] if you want to see the URLs for yourself.
 
