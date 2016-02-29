@@ -6,11 +6,19 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 |Status|
 |------|
-|0.6.1 |
+|0.6.2 |
 
 ## Overview
 
 **Shortcuts.sh** adds high-level commands to open various programs or start various tasks via a bash CLI client.
+
+---
+
+**Note**: this CLI has scripts that allow users to install dependency programs onto their computer. Running such installations may include updating system package managers such as `brew` or `npm`, and will use such package managers as well as `curl` to retrieve the proper files.
+
+All connections to websites are made using `https://`, and be sure to check the [documentation][2] if you want to see the URLs for yourself.
+
+---
 
 ## Installation
 

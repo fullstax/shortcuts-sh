@@ -82,14 +82,24 @@ search() {
 	ochr "https://www.google.com/search?q=$QUERY&oq=$QUERY";
 }
 
-# Translate via Google
+# Translate via Google, using auto-detect language
+# Set $DEFAULT_LANG to the code of the language you'd 
+# 	like to auto-translate to.
+DEFAULT_LANG="en"
 translate() {
 	QUERY="";
-	for var in $@		
-	do
-		QUERY="$QUERY$var%20";
-	done
-	echo $QUERY;
-	echo "https://translate.google.com/?source=osdd#auto/en/$QUERY";
-	ochr "https://translate.google.com/?source=osdd#auto/en/$QUERY";
+	if [[ $1 == '-p' || $1 == '--paste' ]]; then
+		QUERY=$(pbpaste);
+		QUERY=${QUERY// /\%20};
+		echo $QUERY;
+		ochr "https://translate.google.com/?source=osdd#auto/$DEFAULT_LANG/$QUERY";
+	else
+		for var in $@		
+		do
+			QUERY="$QUERY$var%20";
+		done
+		echo $QUERY;
+		echo "https://translate.google.com/?source=osdd#auto/$DEFAULT_LANG/$QUERY";
+		ochr "https://translate.google.com/?source=osdd#auto/$DEFAULT_LANG/$QUERY";
+	fi
 }
