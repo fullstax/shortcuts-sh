@@ -6,7 +6,7 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 |Status|
 |------|
-|0.5.5 |
+|0.6.0 |
 
 ## Overview
 
@@ -42,12 +42,13 @@ Once you restart your Terminal/Bash shell or open up a new window/tab, you'll be
 
 ## Commands
 
-Check [the wiki][2] for 
+Check [the wiki][2] for more in-depth command documentation.
 
 |script|description|
 |------|-----------|
 |`$ shortcuts`|Get a quick overview of the project.|
 |`$ shortcuts docs`|Open the Readme file on Github.|
+|`$ shortcuts install [cline, programs]`|Install dependencies for certain commands.|
 |`$ shortcuts v[ersion]`|View project version.|
 
 ## Updating

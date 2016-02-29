@@ -45,6 +45,26 @@ lookup() {
 	ochr "http://dictionary.reference.com/browse/$QUERY";
 }
 
+# search npm
+package() {
+	QUERY="";
+	for var in $@		
+	do
+		QUERY="$QUERY$var%20";
+	done
+	ochr "https://www.npmjs.com/search?q=$QUERY"
+}
+
+# http://design.google.com/resizer/#url=
+resizer() {
+	if [[ $1 ]]; then
+		QUERY=$1;
+		ochr http://design.google.com/resizer/#url=$(rawurlencode $QUERY);
+	else
+		ochr http://design.google.com/resizer/#url;
+	fi
+}
+
 # Search Google
 search() {
 	input=""
@@ -62,12 +82,14 @@ search() {
 	ochr "https://www.google.com/search?q=$QUERY&oq=$QUERY";
 }
 
-# search npm
-package() {
+# Translate via Google
+translate() {
 	QUERY="";
 	for var in $@		
 	do
 		QUERY="$QUERY$var%20";
 	done
-	ochr "https://www.npmjs.com/search?q=$QUERY"
+	echo $QUERY;
+	echo "https://translate.google.com/?source=osdd#auto/en/$QUERY";
+	ochr "https://translate.google.com/?source=osdd#auto/en/$QUERY";
 }
