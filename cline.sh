@@ -10,8 +10,9 @@
   alias run="npm run"
   alias uninstall="npm uninstall"
   # other
-  alias ngrok="~/ngrok"
-  alias standby="pmset sleepnow"
+  alias be="bundle exec" # for bundle script execution
+  alias ngrok="~/ngrok" # alias from ./ngrok
+  alias standby="pmset sleepnow" # put computer on "standbye" mode
 
 # generates documentation via Documentation.js (http://bit.ly/1QzI3Sp)
 doc() {

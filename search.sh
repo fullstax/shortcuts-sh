@@ -15,6 +15,17 @@ can() {
 	fi
 }
 
+# open codepen or new pen
+codepen() {
+	if [[ $1 ]]; then
+		if [[ $1 == 'new' ]]; then
+			open http://codepen.io/pen;
+		fi
+	else
+		open http://codepen.io/;
+	fi
+}
+
 github() {
 	input=""
 	for el in $@; do
@@ -23,12 +34,7 @@ github() {
 	QUERY=${input// /\%20};
 	QUERY=${QUERY//-/\%2D};
 	if [[ $1 ]]; then
-		if [[ $1 -eq -u ]]; then
-			ochr https://github.com/;
-
-		else
-			ochr https://github.com/search?q=$1;
-		fi
+		ochr https://github.com/search?q=$QUERY;
 	else
 		ochr https://github.com/;
 	fi
@@ -80,6 +86,30 @@ search() {
 	echo "Searching for:$input";
 	echo "https://www.google.com/search?q=$QUERY&oq=$QUERY";
 	ochr "https://www.google.com/search?q=$QUERY&oq=$QUERY";
+}
+
+# Search wikipedia
+# Set $DEFAULT_WIKI_LANG to code of language you'd
+# 	like to auto-search in.
+DEFAULT_WIKI_LANG="en"
+wiki() {
+	# https://en.wikipedia.org/w/index.php?search=test+post+please+ignore
+	input=""
+	for el in $@; do
+		if [[ $el == $1 ]]; then
+			input="$el";
+		else
+	    	input="$input $el";
+	    fi
+	done
+	QUERY=${input// /\+};
+	QUERY=${QUERY//,/\%2C};
+	QUERY=${QUERY//./\%2E};
+	QUERY=${QUERY//-/\%2D};
+	QUERY=${QUERY//\:/\%3A};
+	echo "Searching for: $input";
+	echo "https://$DEFAULT_WIKI_LANG.wikipedia.org/w/index.php?search=$QUERY";
+	ochr "https://$DEFAULT_WIKI_LANG.wikipedia.org/w/index.php?search=$QUERY";
 }
 
 # Translate via Google, using auto-detect language
