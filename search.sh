@@ -63,6 +63,23 @@ lookup() {
 	ochr "http://dictionary.reference.com/browse/$QUERY";
 }
 
+mdn() {
+	input=""
+	for el in $@; do
+		if [[ $el == $1 ]]; then
+			input="$el";
+		else
+	    	input="$input $el";
+	    fi
+	done
+	QUERY=${input// /\+};
+	QUERY=${QUERY//,/\%2C};
+	QUERY=${QUERY//./\%2E};
+	QUERY=${QUERY//-/\%2D};
+	QUERY=${QUERY//\:/\%3A};
+	ochr "https://developer.mozilla.org/en-US/search?q=$QUERY";
+}
+
 # search npm
 package() {
 	QUERY="";
