@@ -24,7 +24,15 @@ doc() {
 			stripped=${FILENAME%.es6};
 			stripped=${stripped%.js};
 			stripped=${stripped##*/};
-			documentation $1 -f md --github > $stripped.md;
+			if test -f ./docs
+			then
+				# true
+				documentation $1 -f md --github > ./docs/$stripped.md;
+			else
+				# false
+				mkdir ./docs;
+				documentation $1 -f md --github > ./docs/$stripped.md;
+			fi
 		fi
 	else
 		echo "No source file given."
