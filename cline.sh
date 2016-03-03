@@ -27,6 +27,74 @@ doc() {
 	fi
 }
 
+# lorem-ipsum command line generator
+li() {
+	if [[ $1 == '-c' ]]; then
+		# copy to clipboard
+		if [[ $2 ]]; then
+			if [[ $3 ]]; then
+				if [[ $4 ]]; then
+					COUNT=$2
+					UNIT=$3
+					FORMAT=$4
+					lorem-ipsum --units $UNIT --count $COUNT --format $FORMAT | pbcopy;
+				else
+					COUNT=$2
+					UNIT=$3
+					lorem-ipsum --units $UNIT --count $COUNT --format $FORMAT | pbcopy;
+				fi
+			else
+				COUNT=$2
+				lorem-ipsum --units sentence --count $COUNT --format plain | pbcopy;
+			fi
+		else
+			lorem-ipsum --units sentence --count 1 --format plain | pbcopy;
+		fi
+	elif [[ $1 == '-o' ]]; then
+		# output to file
+		if [[ $3 ]]; then
+			if [[ $4 ]]; then
+				if [[ $5 ]]; then
+					COUNT=$3
+					UNIT=$4
+					FORMAT=$5
+					lorem-ipsum --units $UNIT --count $COUNT --format $FORMAT > $2;
+				else
+					COUNT=$3
+					UNIT=$4
+					lorem-ipsum --units $UNIT --count $COUNT --format $FORMAT > $2;
+				fi
+			else
+				COUNT=$3
+				lorem-ipsum --units sentence --count $COUNT --format plain > $2;
+			fi
+		else
+			lorem-ipsum --units sentence --count 1 --format plain > $2;
+		fi
+	else
+		# print to terminal
+		if [[ $1 ]]; then
+			if [[ $2 ]]; then
+				if [[ $3 ]]; then
+					COUNT=$1
+					UNIT=$2
+					FORMAT=$3
+					lorem-ipsum --units $UNIT --count $COUNT --format $FORMAT;
+				else
+					COUNT=$1
+					UNIT=$2
+					lorem-ipsum --units $UNIT --count $COUNT --format $FORMAT;
+				fi
+			else
+				COUNT=$1
+				lorem-ipsum --units sentence --count $COUNT --format plain;
+			fi
+		else
+			lorem-ipsum --units sentence --count 1 --format plain;
+		fi
+	fi
+}
+
 # convert markdown file to HTML via markdown_py
 markdown() { 
 	if [ $2 ]; then

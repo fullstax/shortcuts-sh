@@ -6,7 +6,7 @@ source "${DIRECTORY}/search.sh"
 
 shortcuts() {
 	if [[ $1 == "v" || $1 == "version" ]]; then
-		echo "Shortcuts.sh v0.6.4";
+		echo "Shortcuts.sh v0.6.5";
 	elif [[ $1 == "docs" ]]; then
 		open https://github.com/fullstax/shortcuts-sh/blob/master/README.md;
 	elif [[ $1 == 'i' || $1 == 'install' ]]; then
@@ -40,6 +40,9 @@ shortcuts() {
 			if [[ $3 == 'httpster' ]]; then
 				printf "\nSHORTCUTS-SH\n***********\nGlobally installing Httpster via \`npm install -g\`\n";
 				npm i -g httpster;
+			elif [[ $3 == 'lorem' ]]; then
+				printf "\nSHORTCUTS-SH\n***********\nGlobally installing Lorem-Ipsum via \`npm install -g\`\n";
+				npm i lorem-ipsum --global;
 			elif [[ $3 == 'py-md' ]]; then
 				printf "\nSHORTCUTS-SH\n***********\nUpdating PIP using sudo, then installing Python Markdown package via \`pip install\`\n";
 				sudo pip install --upgrade pip &&
@@ -47,6 +50,7 @@ shortcuts() {
 			else
 				printf "\nSHORTCUTS-SH\n***********\nGo to the following sites to download dependencies for cline.sh:\n";
 				printf "* Httpster: https://simbco.github.io/httpster/\n    Run \`$ shortcuts install cline httpster\` to install.\n\n";
+				printf "* Lorem-Ipsum: https://www.npmjs.com/package/lorem-ipsum\n    Run \`$ shortcuts install cline lorem\` to install.\n\n";
 				printf "* PHP Interactive Shell: http://php.net/downloads.php\n    PHP language package comes with an interactive shell; if you already have PHP installed, you do NOT need to re-download.\n\n";
 				printf "* Python Interactive Shell: https://www.python.org/downloads/\n    Python language package comes with an interactive shell; if you already have Python installed, you do NOT need to re-download.\n\n";
 				printf "* PIP Python Package downloader: https://pypi.python.org/pypi/pip#downloads\n\n"

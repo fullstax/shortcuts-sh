@@ -26,6 +26,18 @@ codepen() {
 	fi
 }
 
+gist() {
+	input="";
+	for el in $@; do
+		echo "";
+	done
+	if [[ $1 == 'new' ]]; then
+		open http://gist.github.com;
+	else
+		open http://gist.github.com;
+	fi
+}
+
 github() {
 	input=""
 	for el in $@; do
