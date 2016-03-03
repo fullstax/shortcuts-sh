@@ -37,7 +37,10 @@ shortcuts() {
 				printf "* Tower: https://www.git-tower.com/\n    Run \`$ shortcuts install programs tower\` to install.\n\n";
 			fi
 		elif [[ $2 == 'cline' ]]; then
-			if [[ $3 == 'httpster' ]]; then
+			if [[ $3 == 'doc' ]]; then
+				printf "\nSHORTCUTS-SH\n***********\nGlobally installing Documentation.js via \`npm install -g\`\n";
+				npm i -g documentation;
+			elif [[ $3 == 'httpster' ]]; then
 				printf "\nSHORTCUTS-SH\n***********\nGlobally installing Httpster via \`npm install -g\`\n";
 				npm i -g httpster;
 			elif [[ $3 == 'lorem' ]]; then

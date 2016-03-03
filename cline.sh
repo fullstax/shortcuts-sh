@@ -20,7 +20,11 @@ doc() {
 		if [[ $2 ]]; then
 			documentation $1 -f md --github > $2.md;
 		else 
-			documentation $1 -f md --github > README.md;
+			FILENAME=$1;
+			stripped=${FILENAME%.es6};
+			stripped=${stripped%.js};
+			stripped=${stripped##*/};
+			documentation $1 -f md --github > $stripped.md;
 		fi
 	else
 		echo "No source file given."
