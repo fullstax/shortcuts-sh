@@ -32,6 +32,13 @@ doc() {
 	fi
 }
 
+# edit bash profile/rc
+	# Change variable BASH_FILE to appropriate bash file 
+BASH_FILE='bash_profile'
+ebash() {
+	open -a 'Sublime Text' ~/.$BASH_FILE;
+}
+
 # lorem-ipsum command line generator
 li() {
 	if [[ $1 == '-c' ]]; then
