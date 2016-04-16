@@ -11,6 +11,7 @@
   alias uninstall="npm uninstall"
   # other
   alias be="bundle exec" # for bundle script execution
+  alias mdm="middleman" # alias for middleman
   alias ngrok="~/ngrok" # alias from ./ngrok
   alias standby="pmset sleepnow" # put computer on "standbye" mode
 
