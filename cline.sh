@@ -156,6 +156,12 @@ server() {
 		else
 			python -m SimpleHTTPServer $DEFAULT_PORT;
 		fi
+	elif [ $1 == 'ruby' ]; then
+		if [ $2 ]; then
+			ruby -run -e httpd . -p $2;
+		else
+			ruby -run -e httpd . -p $DEFAULT_PORT;
+		fi
 	else
 		if [ $2 ]; then
 			httpster -p $2;
@@ -191,6 +197,14 @@ servero() {
 		else
 			open -a "$DEFAULT_BROWSER" http://localhost:$DEFAULT_PORT &&
 			python -m SimpleHTTPServer $DEFAULT_PORT;
+		fi
+	elif [ $1 == 'ruby' ]; then
+		if [ $2 ]; then
+			open -a "$DEFAULT_BROWSER" http://localhost:$2 &&
+			ruby -run -e httpd . -p $2
+		else 
+			open -a "$DEFAULT_BROWSER" http://localhost:$DEFAULT_PORT &&
+			ruby -run -e httpd . -p $DEFAULT_PORT
 		fi
 	else
 		if [ $2 ]; then
