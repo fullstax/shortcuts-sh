@@ -11,6 +11,7 @@
   alias uninstall="npm uninstall"
   # other
   alias be="bundle exec" # for bundle script execution
+  alias mdm="middleman" # alias for middleman
   alias ngrok="~/ngrok" # alias from ./ngrok
   alias standby="pmset sleepnow" # put computer on "standbye" mode
 
@@ -37,6 +38,13 @@ doc() {
 	else
 		echo "No source file given."
 	fi
+}
+
+# edit bash profile/rc
+	# Change variable BASH_FILE to appropriate bash file 
+BASH_FILE='bash_profile'
+ebash() {
+	open -a 'Sublime Text' ~/.$BASH_FILE;
 }
 
 # lorem-ipsum command line generator
