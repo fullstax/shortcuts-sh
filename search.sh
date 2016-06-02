@@ -80,6 +80,16 @@ mdn() {
 	ochr "https://developer.mozilla.org/en-US/search?q=$QUERY";
 }
 
+# Google mobile test
+# https://testmysite.thinkwithgoogle.com/?url=https://fullstax.io
+mobiletest() {
+	if [[ $1 ]]; then 
+		open "https://testmysite.thinkwithgoogle.com/?url=$1";
+	else
+		echo "No URL given";
+	fi
+}
+
 # search npm
 package() {
 	QUERY="";

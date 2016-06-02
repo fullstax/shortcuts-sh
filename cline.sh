@@ -42,7 +42,7 @@ doc() {
 
 # edit bash profile/rc
 	# Change variable BASH_FILE to appropriate bash file 
-BASH_FILE='bash_profile'
+BASH_FILE='bashrc'
 ebash() {
 	open -a 'Sublime Text' ~/.$BASH_FILE;
 }

@@ -6,7 +6,7 @@ source "${DIRECTORY}/search.sh"
 
 shortcuts() {
 	if [[ $1 == "v" || $1 == "version" ]]; then
-		echo "Shortcuts.sh v0.6.8";
+		echo "Shortcuts.sh v0.6.9";
 	elif [[ $1 == "docs" ]]; then
 		open https://github.com/fullstax/shortcuts-sh/blob/master/README.md;
 	elif [[ $1 == 'i' || $1 == 'install' ]]; then
