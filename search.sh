@@ -110,6 +110,25 @@ resizer() {
 	fi
 }
 
+# Structured Data testing via Google/Schema.org
+# https://search.google.com/structured-data/testing-tool#url=
+
+schema() {
+	if [[ $1 == '-s' ]]; then
+		if [[ $2 ]]; then
+			ochr "http://schema.org/$2";
+		else
+			ochr "http://schema.org";
+		fi
+	elif [[ $1 == '-t' ]]; then
+		if [[ $2 ]]; then
+			ochr "https://search.google.com/structured-data/testing-tool#url=$1";
+		else
+			ochr "https://search.google.com/structured-data/testing-tool";
+		fi
+	fi
+}
+
 # Search Google
 search() {
 	input=""

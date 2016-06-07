@@ -6,7 +6,7 @@ Meant to be used with Mac OS X or other bash CLIs.
 
 |Status|
 |------|
-|0.6.9 |
+|0.7.0 |
 
 ## Overview
 
