@@ -122,7 +122,7 @@ schema() {
 		fi
 	elif [[ $1 == '-t' ]]; then
 		if [[ $2 ]]; then
-			ochr "https://search.google.com/structured-data/testing-tool#url=$1";
+			ochr "https://search.google.com/structured-data/testing-tool#url=$2";
 		else
 			ochr "https://search.google.com/structured-data/testing-tool";
 		fi
