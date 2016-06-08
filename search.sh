@@ -191,3 +191,23 @@ translate() {
 		ochr "https://translate.google.com/?source=osdd#auto/$DEFAULT_LANG/$QUERY";
 	fi
 }
+
+wp() {
+	if [[ $1 ]]; then
+		if [[ $1 == '-c' || $1 == '--codex' ]]; then
+			if [[ $2 ]]; then 
+				QUERY="";
+				for var in $@		
+				do
+					if [[ $var != $1 ]]; then
+						QUERY="$QUERY$var+";
+					fi
+				done
+				QUERY=${QUERY%+};
+				ochr "https://wordpress.org/search/$QUERY";
+			else
+				ochr "https://codex.wordpress.org/"
+			fi
+		fi
+	fi
+}
