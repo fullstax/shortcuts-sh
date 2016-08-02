@@ -9,11 +9,18 @@
   alias update="npm update"
   alias run="npm run"
   alias uninstall="npm uninstall"
-  # other
+  # other apps
   alias be="bundle exec" # for bundle script execution
+  alias crapp="create-react-app" # alias for c-r-a React boilerplate
   alias mdm="middleman" # alias for middleman
   alias ngrok="~/ngrok" # alias from ./ngrok
   alias standby="pmset sleepnow" # put computer on "standbye" mode
+  # CLine aliases
+  alias cpr='cp -r';
+  alias rmr='rm -r';
+  alias lsa='ls -la';
+  alias lsl='ls -l';
+  alias mkdp='mkdir -p';
 
 # generates documentation via Documentation.js (http://bit.ly/1QzI3Sp)
 doc() {
