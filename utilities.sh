@@ -21,10 +21,13 @@ rawurlencode() {
 # get current time
 ts(){
 	if [[ $1 == '-d' ]]; then
+		# timestamp with (US) date
 	  	echo $(date '+%T %D');
 	elif [[ $1 == '-e' ]]; then
+		# timestamp with euro-style date
 	    echo $(date '+%T %d.%m.%y');
 	elif [[ $1 == '-f' ]]; then
+		# url encoded timestamp
 		DATESTR=$(echo $(date '+%T %d.%m.%y'));
 		DATESTR=${DATESTR//\:/\_};
 		DATESTR=${DATESTR//\./\_};
@@ -32,8 +35,10 @@ ts(){
 		echo $DATESTR;
 	else
 		if [[ $1 == '-s' ]]; then
+			# ...with seconds and TimeOfDay stamp
 			echo $(date +%r);
 	  	else
+	  		# simple 24hr timestamp
 	  		echo $(date +%R);
 	  	fi
 	fi

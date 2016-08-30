@@ -54,6 +54,28 @@ ebash() {
 	open -a 'Sublime Text' ~/.$BASH_FILE;
 }
 
+# interactive shells for various languages
+ishell () {
+	if [[ $1 ]]; then
+		echo "Starting $1 interactive shell";
+		if [[ $1 == 'python' ]]; then
+			python;
+		elif [[ $1 == 'php' ]]; then
+			php -a;
+		elif [[ $1 == 'ruby' ]]; then
+			irb; 
+		elif [[ $1 == 'sql' || $1 == 'sqlite' || $1 == 'sqlite3' ]]; then
+			if [[ $2 ]]; then
+				sqlite3 $2;
+			else
+				sqlite3;
+			fi
+		fi
+	else
+		echo "No language specified.";
+	fi
+}
+
 # lorem-ipsum command line generator
 li() {
 	if [[ $1 == '-c' ]]; then
