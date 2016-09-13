@@ -58,11 +58,11 @@ ebash() {
 ishell () {
 	if [[ $1 ]]; then
 		echo "Starting $1 interactive shell";
-		if [[ $1 == 'python' ]]; then
+		if [[ $1 == 'python' || $1 == 'py' ]]; then
 			python;
 		elif [[ $1 == 'php' ]]; then
 			php -a;
-		elif [[ $1 == 'ruby' ]]; then
+		elif [[ $1 == 'ruby' || $1 == 'rb' ]]; then
 			irb; 
 		elif [[ $1 == 'sql' || $1 == 'sqlite' || $1 == 'sqlite3' ]]; then
 			if [[ $2 ]]; then
